@@ -1,7 +1,7 @@
 ## THIS TO AUTHENTICATE TO ECR, DON'T CHANGE IT
 provider "aws" {
-  region = "us-west-1"
-  alias  = "california"
+  region = "us-east-1"
+  alias  = "virginia"
 }
 
 provider "aws" {
@@ -35,7 +35,7 @@ data "aws_eks_cluster_auth" "this" {
 }
 
 data "aws_ecrpublic_authorization_token" "token" {
-  provider = aws.california
+  provider = aws.virginia
 }
 
 data "aws_availability_zones" "available" {}
